@@ -1,0 +1,18 @@
+key,value,unit,source_id,classification
+offer_price_per_share,210.0,USD/share,S2/S3,Reported
+equity_value_mm,10100.0,USD mm,S3,Reported rounded
+enterprise_value_mm,13600.0,USD mm,S2/S3,Reported rounded
+annual_cost_synergies_mm,325.0,USD mm,S2/S7,Reported
+chart_2024_sales_mm,4160.3,USD mm,S4,Reported
+chart_2024_operating_income_mm,647.5,USD mm,S4,Reported
+chart_2024_depreciation_mm,76.0,USD mm,S4,Reported
+chart_2024_amortization_mm,193.9,USD mm,S4,Reported
+chart_2024_tax_expense_mm,78.6,USD mm,S4,Reported
+chart_2024_pretax_income_mm,318.5,USD mm,S4,Reported
+chart_2024_ar_mm,752.3,USD mm,S4,Reported
+chart_2024_inventory_mm,490.5,USD mm,S4,Reported
+chart_2024_unbilled_mm,735.1,USD mm,S4,Reported
+chart_2024_ap_mm,1058.9,USD mm,S4,Reported
+chart_2024_customer_advances_mm,362.2,USD mm,S4,Reported
+bkr_2025_net_income_mm,2588.0,USD mm,S5,Reported
+bkr_2025_diluted_shares_mm,994.0,mm shares,S5,Reported
