@@ -1,0 +1,44 @@
+name: validation
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  release-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify complete recruiter release assets
+        run: |
+          test -f Baker_Hughes_Chart_MA_Valuation_Model.xlsx
+          test -f outputs/deal_summary.png
+          test -f outputs/dcf_preview.png
+          test -f outputs/qa_checks.png
+      - name: Verify manifest hashes and repository hygiene
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          root = Path('.')
+          manifest = json.loads((root / 'MANIFEST.json').read_text())
+          for rel, meta in manifest.items():
+              p = root / rel
+              assert p.is_file(), f'missing manifest file: {rel}'
+              data = p.read_bytes()
+              assert len(data) == meta['bytes'], f'byte-size mismatch: {rel}'
+              assert hashlib.sha256(data).hexdigest() == meta['sha256'], f'hash mismatch: {rel}'
+          forbidden = [p for p in root.rglob('*') if p.is_file() and ('__pycache__' in p.parts or p.suffix in {'.pyc', '.pyo'})]
+          assert not forbidden, f'cache artifacts found: {forbidden}'
+          print(f'verified {len(manifest)} manifest entries')
+          PY
+      - name: Run reference-model tests
+        run: python -m unittest discover -s tests -v
+      - name: Run model summary
+        run: python -m src.model_logic
