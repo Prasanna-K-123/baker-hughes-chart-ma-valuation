@@ -1,0 +1,62 @@
+{
+  ".github/workflows/validation.yml": {
+    "sha256": "89ece60aec30393717121f4784dcf446cad9a435c3710c189ab8aafb3645f468",
+    "bytes": 393
+  },
+  ".gitignore": {
+    "sha256": "0ab4eb5ed9964646a398570728954e32288e1e35a4f358f523497156b009e5fa",
+    "bytes": 52
+  },
+  "Baker_Hughes_Chart_MA_Valuation_Model.xlsx": {
+    "sha256": "db8a4a0fa271336b511a4bb842137fbc4944669a185fdad285f853ef8bbf1d5b",
+    "bytes": 56381
+  },
+  "LICENSE": {
+    "sha256": "589141528220eba258709d7087bf8f325b910f139fefe94d841dfa1484189c0b",
+    "bytes": 1067
+  },
+  "README.md": {
+    "sha256": "494ae56b0558f1202e18becc4c3ae32c9fab01e7be256cfa35e4abd99a2bb041",
+    "bytes": 6682
+  },
+  "outputs/dcf_preview.png": {
+    "sha256": "b202c7859e2610405e98e0bbd94c02f45fdd31240aabf70f44059eac50dc5e2a",
+    "bytes": 272387
+  },
+  "outputs/deal_summary.png": {
+    "sha256": "70f1261daf08fc902684e71fd8504adb25713fd0ce314d20296c35ea8811096d",
+    "bytes": 340839
+  },
+  "outputs/qa_checks.png": {
+    "sha256": "acb7541bbeaa7bc2a6a6458fc17f298d6ee8c87e301b9ac3b29d0ee2391d5cc5",
+    "bytes": 172119
+  },
+  "reference/SOURCES.md": {
+    "sha256": "2d09d0cc6a7f891a1b91622085aebfc19fb9549319338be20a271c72c63f0f6b",
+    "bytes": 1698
+  },
+  "reference/management_projections.csv": {
+    "sha256": "3954255c5f033ec86c3ed838b9906a9683b6b1fa11b38af086cefccb7fb18019",
+    "bytes": 214
+  },
+  "reference/source_facts.csv": {
+    "sha256": "f34127bef84ad7be0e5ccb47db8b271cd703e7b72bf4cfcbb82f4dbab62e372f",
+    "bytes": 924
+  },
+  "src/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "src/model_logic.py": {
+    "sha256": "a84094186b37a3810e1c43d49d9cce3edef80f37a7a9c8f87ca1bc234ad8ba24",
+    "bytes": 3929
+  },
+  "tests/__init__.py": {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0
+  },
+  "tests/test_reference_model.py": {
+    "sha256": "8c00081f08ed3580a6d7eaa0deed442d0cf8a4c831abf7fe369564efc8c82e8c",
+    "bytes": 1269
+  }
+}
