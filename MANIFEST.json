@@ -1,7 +1,7 @@
 {
   ".github/workflows/validation.yml": {
-    "sha256": "89ece60aec30393717121f4784dcf446cad9a435c3710c189ab8aafb3645f468",
-    "bytes": 393
+    "sha256": "361fa58a4a3ad9327589b67b86ed9c4cbf9039cc33dff366b3cad723be166de3",
+    "bytes": 1571
   },
   ".gitignore": {
     "sha256": "0ab4eb5ed9964646a398570728954e32288e1e35a4f358f523497156b009e5fa",
@@ -48,8 +48,8 @@
     "bytes": 0
   },
   "src/model_logic.py": {
-    "sha256": "a84094186b37a3810e1c43d49d9cce3edef80f37a7a9c8f87ca1bc234ad8ba24",
-    "bytes": 3929
+    "sha256": "3458ab58fef78338c2744cea528021106b452ffd70917e4103a3d7818db8d895",
+    "bytes": 3861
   },
   "tests/__init__.py": {
     "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
