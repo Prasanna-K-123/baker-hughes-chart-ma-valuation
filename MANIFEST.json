@@ -14,5 +14,21 @@
   "outputs/qa_checks.png": {
     "sha256": "acb7541bbeaa7bc2a6a6458fc17f298d6ee8c87e301b9ac3b29d0ee2391d5cc5",
     "bytes": 172119
+  },
+  "equity_research/README.md": {
+    "sha256": "8b6ea20e4c05b798d92bb709d74df5c4e39e20c32cc2029d860350268b77dc40",
+    "bytes": 5488
+  },
+  "equity_research/model_snapshot.csv": {
+    "sha256": "9898c340c242c375aefa072adf28938e24385c9fb23d0b811f82c2082fb6b0fb",
+    "bytes": 759
+  },
+  "equity_research/assumptions.csv": {
+    "sha256": "444942a2d78483b4dfff056d3ad9a7b392fde653d37bc4bf5e79df7a208c8a25",
+    "bytes": 587
+  },
+  "equity_research/sources.md": {
+    "sha256": "df114d3d0bff8406d2b079f5f8fa717b17e4ea53b96d4de9f1fb1550394f282f",
+    "bytes": 2460
   }
 }
