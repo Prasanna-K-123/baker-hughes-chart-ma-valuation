@@ -39,9 +39,11 @@ At the **11 September 2026 close of $59.06/share**, the independent scenario ana
 - **Bear:** $44.82/share;
 - **Base:** $62.65/share;
 - **Bull:** $74.73/share;
-- **Probability-weighted fair value:** $61.22/share.
+- **Probability-weighted undiscounted forward scenario quote (not spot fair value):** $61.22/share.
 
-The resulting recommendation is **HOLD / NEUTRAL**. The neutral conclusion is retained rather than forcing a bullish thesis: modeled base-case upside is modest and the probability-weighted value is close to the fixed market-price snapshot.
+**Interpretation correction:** The $44.82/$62.65/$74.73 quotes use `2028E EBITDA × exit EV/EBITDA − 2027E EBITDA × assumed target leverage`, divided by the 30 June 2026 share-count proxy. This mixes 2028 enterprise value with 2027 EBITDA as net-debt proxy and has **no specified target-date debt roll-forward or discounting back to the September 2026 market-price date**. They are illustrative forward scenario values, **not current fair values or independently established expected returns**. [Exact formula, assumptions and implications](equity_research/README.md).
+
+The resulting recommendation is **HOLD / NEUTRAL**. The neutral conclusion is retained rather than forcing a bullish thesis: modeled base-case upside is modest and the undiscounted probability-weighted scenario quote is close to the fixed market-price snapshot; that numerical proximity is not a dated return estimate.
 
 The extension separates core Baker Hughes from Chart and tests integration/margin execution, deleveraging, FCF conversion, catalysts, risks and valuation-multiple sensitivity. The **$325m** cost-synergy target is **not** added on top of management-aligned 2028 margin assumptions, avoiding a double count.
 
