@@ -8,9 +8,9 @@ This folder extends the repository's original Baker Hughes / Chart transaction a
 
 ## Investment view
 
-Baker Hughes has a credible path to a higher-quality earnings mix through Chart integration, a **22%-23% Chart EBITDA-margin target by 2H28**, **$325m** of annualized cost synergies, and leverage reduction toward **1.0-1.5x**. The central issue is valuation rather than strategic logic: the base case offers only modest upside from the fixed market-price snapshot, while the probability-weighted fair value remains close to spot.
+Baker Hughes has a credible path to a higher-quality earnings mix through Chart integration, a **22%-23% Chart EBITDA-margin target by 2H28**, **$325m** of annualized cost synergies, and leverage reduction toward **1.0-1.5x**. The central issue is valuation rather than strategic logic: the base case offers only modest upside from the fixed market-price snapshot, while the probability-weighted undiscounted scenario quote remains close to the fixed spot snapshot under the illustrative conventions.
 
-The neutral conclusion is deliberate. The analysis does not force a positive recommendation when the modeled expected return is limited.
+The neutral label is the project's dated illustrative research stance, **not** a valuation-certified investment recommendation. The unadjusted forward quote comparison cannot establish a return forecast. The neutral conclusion is deliberate. The analysis does not force a positive recommendation when the modeled expected return is limited.
 
 ## Scenario valuation
 
@@ -21,7 +21,13 @@ The neutral conclusion is deliberate. The analysis does not force a positive rec
 | Bull | 25% | $7.34bn | 1.55x | 11.5x | $74.73 | 26.5% |
 | **Probability-weighted** | **100%** |  |  |  | **$61.22** | **3.7%** |
 
-The share-count proxy is **992.327m Class A shares outstanding at 30 June 2026**, taken from Baker Hughes' Q2 2026 Form 10-Q. Scenario growth, margins, target-date leverage, FCF conversion and valuation multiples are analyst assumptions rather than company guidance.
+The share-count proxy is **992.327m Class A shares outstanding at 30 June 2026**, taken from Baker Hughes' Q2 2026 Form 10-Q.
+
+**Valuation-basis clarification (audited 12 October 2026):** Each displayed scenario is an **undiscounted, mixed-year forward scenario proxy**, not a present fair-value estimate. Reproduced directly from the frozen `model_snapshot.csv` values, the identity is:
+
+`implied_equity_value_bn = 2028E_EBITDA_bn × exit_EV_EBITDA − 2027E_EBITDA_bn × target_net_leverage`; `scenario_value_per_share = implied_equity_value_bn / 0.992327bn shares`.
+
+The Base calculation is `6.9682243920 × 10.5 − 6.2821731065 × 1.75 = 62.1725531796` **USD bn**, or **$62.6533/share**. This mixes a **2028 enterprise-value numerator** with a **2027 EBITDA proxy for net debt**. The original record does not establish a common explicit valuation target date, debt roll-forward to that date, discounting of the exit price to 11 September 2026, share-count roll-forward, or dividends. The stated $61.22 probability-weighted value is only a probability-weighted **scenario quote under these conventions**; comparing it to the September 2026 spot price does not produce a validated investment horizon return, annualized upside or contemporaneous intrinsic value. No historical result has been recomputed, retuned or relabelled as a newly executed valuation. Scenario growth, margins, target-date leverage, FCF conversion and valuation multiples are analyst assumptions rather than company guidance.
 
 ## Variant perception
 
