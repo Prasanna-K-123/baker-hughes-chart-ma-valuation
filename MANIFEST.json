@@ -16,8 +16,8 @@
     "bytes": 172119
   },
   "equity_research/README.md": {
-    "sha256": "8b6ea20e4c05b798d92bb709d74df5c4e39e20c32cc2029d860350268b77dc40",
-    "bytes": 5488
+    "sha256": "c165bf778ddd5003a1f915443fc87d5ea8c11f9d6e498193197e69981acfa286",
+    "bytes": 8414
   },
   "equity_research/model_snapshot.csv": {
     "sha256": "9898c340c242c375aefa072adf28938e24385c9fb23d0b811f82c2082fb6b0fb",
@@ -30,5 +30,49 @@
   "equity_research/sources.md": {
     "sha256": "df114d3d0bff8406d2b079f5f8fa717b17e4ea53b96d4de9f1fb1550394f282f",
     "bytes": 2460
+  },
+  "src/equity_bridge.py": {
+    "sha256": "146a65ee2de0ca5f71f296a6f81b7d5ce5d886c13248f9515729aed2d7289a92",
+    "bytes": 8847
+  },
+  "research_equity_bridge/run.py": {
+    "sha256": "09c41c13822ba777e6cdd4470d64702dad5dfedff13995041187ab0bb64e5028",
+    "bytes": 7318
+  },
+  "tests/test_equity_bridge.py": {
+    "sha256": "89eb3dc7e965790bc741674d66218898dff7e0a078973415bbbe47c050973a35",
+    "bytes": 6742
+  },
+  "reference/equity_bridge/summary.json": {
+    "sha256": "1ae27f9484ad63d07b8b9c767f7e3a26c84afd1e3480a0e51b79ee65df423480",
+    "bytes": 14969
+  },
+  "docs/DATED_EQUITY_BRIDGE_PROTOCOL.md": {
+    "sha256": "7241ce593f3c85679e8a48f4fb12b2bb6c85147884524d17598ce4cbcba634a9",
+    "bytes": 4014
+  },
+  "docs/DATED_EQUITY_BRIDGE_REVIEW.md": {
+    "sha256": "880c2d4666387dd4987ac598fe7e89557d82cc7904209fcb32a5e0f46d15d36c",
+    "bytes": 4555
+  },
+  "README.md": {
+    "sha256": "6f1517495de1dc7cf64efef29b5719a9228b543bbdb582eac1e93a75bb420764",
+    "bytes": 12053
+  },
+  ".github/workflows/validation.yml": {
+    "sha256": "3f567958601c701c15ca7d0777a896681ba8b42c48d73360b02e03e12a75f437",
+    "bytes": 1970
+  },
+  "src/model_logic.py": {
+    "sha256": "3458ab58fef78338c2744cea528021106b452ffd70917e4103a3d7818db8d895",
+    "bytes": 3861
+  },
+  "reference/source_facts.csv": {
+    "sha256": "0e4d738a837aa2f0900b465075e8bc3ace1a8643f0bc7d92c1dcd7275ad154eb",
+    "bytes": 906
+  },
+  "reference/management_projections.csv": {
+    "sha256": "92642e01b4ad91f324f08929150365147d6f377b64b2e07577910597ff3da499",
+    "bytes": 207
   }
 }
