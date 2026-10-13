@@ -54,6 +54,14 @@ GitHub-native evidence:
 - [`equity_research/assumptions.csv`](equity_research/assumptions.csv) — bear/base/bull analyst assumptions;
 - [`equity_research/sources.md`](equity_research/sources.md) — primary-source register and fixed market-price source.
 
+## Explicit dated scenario pricing — 13 October 2026 repair
+
+The original forward quotes above remain historical. A separately registered reproduction now uses **31 December 2028 for both enterprise value and its target-net-debt proxy**, a constant share proxy, and explicit discounting to the frozen 11 September 2026 date. This removes the mixed-year arithmetic convention without inventing a reported debt roll-forward.
+
+With the unchanged scenario inputs, common-date terminal quotes are **$43.89/$61.44/$73.56** (Bear/Base/Bull), weighted **$60.08**. At an explicitly illustrative **10% annual equity required return and zero intermediate distributions**, the weighted **terminal-only PV is $48.23**, 18.35% below the frozen $59.06 spot comparison. These are conditional pricing outputs, **not calibrated intrinsic fair value or a new investment recommendation**. Dividends, debt roll-forward, dilution, multiple selection and the required return remain assumptions or unmodeled dependencies.
+
+The complete result, independent checks and exact reproduction route are in the [dated bridge review](docs/DATED_EQUITY_BRIDGE_REVIEW.md), with [pre-execution method registration](docs/DATED_EQUITY_BRIDGE_PROTOCOL.md). The original workbook/transaction DCF and historical scenario CSV are preserved. No updated security price, total-return claim or positive thesis is manufactured.
+
 ## Independent valuation reconstruction
 
 The original transaction workbook triangulates:

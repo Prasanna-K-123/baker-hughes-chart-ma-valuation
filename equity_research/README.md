@@ -85,3 +85,11 @@ The public layer is intentionally text-native so the thesis, assumptions, advers
 - The recommendation is a **dated scenario-model output** and can be wrong.
 - The **$59.06** market price is fixed to the 11 September 2026 close; later market moves require an explicit refresh.
 - The analysis preserves adverse cases and does not treat management targets as guaranteed outcomes.
+
+## Separately registered common-date repair — 13 October 2026
+
+The dated original table is preserved above. The new [review and full result](../docs/DATED_EQUITY_BRIDGE_REVIEW.md) explicitly uses 31 December2028 terminal EV and a same-date target-net-debt assumption. It discounts equity cash flows to the frozen 11 September2026 price date with ACT/365 and explicit illustrative equity rates. No original numeric CSV or original M&A DCF is changed.
+
+Common-date Bear/Base/Bull terminal quotes are $43.89/$61.44/$73.56. Their weighted $60.08 terminal quote is **not** a current fair value. At10% with an explicitly empty distribution schedule, weighted terminal-only PV is $48.23 (18.35% below the frozen spot). At8%/12% it is $50.31/$46.26. The adverse effect of the date/debt correction is retained. Company dividends, sourced debt/cash roll-forward, share dilution and calibrated discount rates are not supplied by this partial scenario model; the original HOLD/NEUTRAL stance remains historical rather than silently becoming a new recommendation.
+
+Reproduce with `python research_equity_bridge/run.py --output /tmp/bkr-dated-equity-new` after the unit checks, using a new output directory outside the repository. The runner reproduces all old price/equity/FCF identities, preserves historical hashes and compares the full newly registered reference with exact schema/type identities plus1e-10 float tolerance.
