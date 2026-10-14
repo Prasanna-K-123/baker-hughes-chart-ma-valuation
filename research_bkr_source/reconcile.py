@@ -111,10 +111,14 @@ def preceding_context(table):
 
 
 def number(value):
-    s=re.sub(r'[\s,$]','',value)
+    if not isinstance(value,str):raise EvidenceError('Displayed financial text required')
+    s=norm(value).replace(' ','')
+    if s.startswith('$'):s=s[1:]
     if s in {'—','–','-'}:return 0
-    if not re.fullmatch(r'(?:[0-9]{1,3}(?:[0-9]{3})*|[0-9]+)|\([0-9]+\)',s):
+    integer=r'(?:0|[1-9][0-9]*|[1-9][0-9]{0,2}(?:,[0-9]{3})+)'
+    if not re.fullmatch(integer+r'|\('+integer+r'\)',s):
         raise EvidenceError('Displayed integer or explicit dash required')
+    s=s.replace(',','')
     return -int(s[1:-1]) if s.startswith('(') else int(s)
 
 
@@ -209,6 +213,7 @@ def parse_transaction(doc,loan_raw):
 
 
 def verify_archive(path):
+    if Path(path).stat().st_size!=60155:raise EvidenceError('Original archive size differs')
     raw=Path(path).read_bytes()
     if hashlib.sha256(raw).hexdigest()!=ARCHIVE_SHA:raise EvidenceError('Original archive digest differs')
     with zipfile.ZipFile(io.BytesIO(raw)) as z:

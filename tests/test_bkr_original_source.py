@@ -146,7 +146,7 @@ class OriginalSourceTests(unittest.TestCase):
     def test_integer_sign_and_nonfinite_controls(self):
         self.assertEqual(number('$ (14,548)'),-14548)
         self.assertEqual(number('—'),0)
-        for x in ('','NaN','inf','1.5','True','2(a)','(1','1)'):
+        for x in ('','NaN','inf','1.5','True','2(a)','(1','1)','1,2,34','1,,234','$ $ 1','01',False,1):
             with self.subTest(value=x):
                 with self.assertRaises(EvidenceError):number(x)
 
