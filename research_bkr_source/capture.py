@@ -108,9 +108,19 @@ def capture(output: Path, user_agent: str):
                 raw = response.read(MAX_BYTES + 1)
             if not raw or len(raw) > MAX_BYTES:
                 raise ValueError('Empty/excessive source response')
+            # Preserve the exact original body even when semantic identity fails.
+            # A recorded response is not a verified filing; overall status stays FAILED.
+            (output / name).write_bytes(raw)
+            status['files'].append({'path': name, 'url': url, 'bytes': len(raw),
+                                    'sha256': hashlib.sha256(raw).hexdigest(),
+                                    'content_type': content_type, 'status_code': 200,
+                                    'captured_at_utc': datetime.now(timezone.utc).isoformat()})
             if name.endswith('.json'):
                 if 'json' not in content_type.lower():
                     raise ValueError('Unexpected JSON source content type')
+                original = json.loads(raw)
+                status['observed_discovery_identity'] = {
+                    k: original.get(k) for k in ('cik', 'name', 'tickers')}
                 status['discovery'] = validate_discovery(raw)
             else:
                 lower = raw.lower()
@@ -122,11 +132,6 @@ def capture(output: Path, user_agent: str):
                 text = re.sub(r'\s+', ' ', html.unescape(re.sub(r'<[^>]*>', ' ', raw.decode('utf-8')))).lower()
                 if 'baker hughes' not in text:
                     raise ValueError('Issuer absent from original filing')
-            (output / name).write_bytes(raw)
-            status['files'].append({'path': name, 'url': url, 'bytes': len(raw),
-                                    'sha256': hashlib.sha256(raw).hexdigest(),
-                                    'content_type': content_type, 'status_code': 200,
-                                    'captured_at_utc': datetime.now(timezone.utc).isoformat()})
         status['status'] = 'PASS_ORIGINAL_BYTE_CAPTURE_ONLY'
         status['scope'] = 'Four original response bodies captured; downstream table reconciliation is separate'
     except Exception as error:
