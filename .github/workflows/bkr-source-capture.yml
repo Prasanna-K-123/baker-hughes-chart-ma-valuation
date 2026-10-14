@@ -1,0 +1,34 @@
+name: Registered original BKR filing capture
+
+on:
+  push:
+    branches: [research/bkr-original-source-20261014]
+    paths:
+      - research_bkr_source/capture.py
+      - .github/workflows/bkr-source-capture.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  capture:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Capture registered original SEC responses
+        env:
+          SEC_USER_AGENT: Prasanna K academic financial research ae26prasanna@mse.ac.in
+        run: python -m research_bkr_source.capture --output bkr-source-capture
+      - name: Preserve source or explicit failure diagnostic
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: registered-bkr-original-source
+          path: bkr-source-capture
+          retention-days: 30
+          if-no-files-found: error

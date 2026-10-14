@@ -172,3 +172,12 @@ The original M&A workbook includes a dedicated `QA Checks` sheet. Current releas
 No formula errors were found in the final original M&A workbook scan.
 
 For the post-close extension, the public release preserves the exact dated scenario outputs and assumptions from the independently QA'd research model; the public Markdown/CSV values are checked against that model before release.
+
+
+## Original SEC source reproduction — 14 October 2026
+
+[Source review and chronology correction](docs/ORIGINAL_BKR_SOURCE_REVIEW.md) · [Registered source protocol](research_bkr_source/PROTOCOL.md) · [Full typed reference](research_bkr_source/reference_summary.json) · [Source attribution](research_bkr_source/SOURCES.md).
+
+Four authentic original SEC responses are pinned for offline reproduction. All20 March2026 AS-IF balance-sheet cells match the earlier transcription;62 original/new source controls and typed replay pass locally. The loan note identifies15July drawdown, distinct from16July closing/report and1October amendment filing. The258 termination fee was paid in2025 and is excluded from new acquisition cash uses.
+
+This closes original-response/table reproducibility for these disclosed rows, not actual post-close balances, a2028 cash/debt calibration or a current investment conclusion. Original financial models and scenarios remain unchanged. See the review for failed source-name checks, all controls and the exact remaining limits.
