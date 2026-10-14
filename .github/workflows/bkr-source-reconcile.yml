@@ -1,0 +1,30 @@
+name: Original BKR source reconciliation
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  pinned-source-replay:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    env:
+      PYTHONDONTWRITEBYTECODE: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run original and new source corruption/refusal tests
+        run: python -W error -m unittest discover -s tests -v
+      - name: Verify complete typed original-source reference
+        run: python -W error -m research_bkr_source.run --output /tmp/bkr-original-source --verify-reference
+      - name: Preserve reviewed reproduction evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: original-bkr-source-reconciliation
+          path: /tmp/bkr-original-source
+          if-no-files-found: error

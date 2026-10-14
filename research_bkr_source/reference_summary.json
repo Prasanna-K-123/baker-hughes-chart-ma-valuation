@@ -1,0 +1,192 @@
+{
+  "actual_postclose_balance": null,
+  "as_if_balance_usd_millions": {
+    "cash": 2484,
+    "gross_debt": 18164,
+    "long_debt": 17411,
+    "short_debt": 753,
+    "simple_net_debt": 15680,
+    "total_assets": 56214
+  },
+  "claim_boundary": "Original HTML response/column integrity and displayed arithmetic only; AS-IF March2026, not actual postclose balances, a forecast, financial/legal certification, fair value or investment recommendation.",
+  "date_correction": "Exhibit identifies July15 loan drawdown; July16 is the closing/report date. Earlier historical shorthand must not collapse these dates.",
+  "filing_discovery": {
+    "cik": "0001701605",
+    "issuer": "Baker Hughes Co",
+    "latest_10q_within_recent_asof_cutoff": {
+      "accessionNumber": "0001701605-26-000023",
+      "filingDate": "2026-07-27",
+      "form": "10-Q",
+      "primaryDocument": "bkr-20260630.htm",
+      "reportDate": "2026-06-30"
+    },
+    "selected_filings": [
+      {
+        "accessionNumber": "0001701605-26-000029",
+        "filingDate": "2026-10-01",
+        "form": "8-K/A",
+        "primaryDocument": "bkr-20260716.htm",
+        "reportDate": "2026-07-16"
+      },
+      {
+        "accessionNumber": "0001193125-26-305477",
+        "filingDate": "2026-07-16",
+        "form": "8-K",
+        "primaryDocument": "d105425d8k.htm",
+        "reportDate": "2026-07-16"
+      }
+    ],
+    "snapshot_scope": "Current capture filtered by cutoff; not original-vintage submissions history"
+  },
+  "original_capture_archive_sha256": "c0c64f1e594a149e0686bbf7c7170a2939e043d9c519ff87111980f1ad22a775",
+  "original_source_vs_frozen_transcription_cells": 20,
+  "parsed_statement_rows": [
+    {
+      "basis": "illustrative_unaudited_pro_forma",
+      "column_values": {
+        "bkr_historical": 14764,
+        "chart_adjusted": 268,
+        "financing_adjustment": 2000,
+        "published_pro_forma": 2484,
+        "transaction_adjustment": -14548
+      },
+      "displayed_cells": [
+        "$ 14,764",
+        "$ 268",
+        "$ (14,548)",
+        "$ 2,000",
+        "$ 2,484"
+      ],
+      "metric": "cash_and_cash_equivalents",
+      "period": "2026-03-31",
+      "source_label": "Cash and cash equivalents",
+      "unit": "USD_millions"
+    },
+    {
+      "basis": "illustrative_unaudited_pro_forma",
+      "column_values": {
+        "bkr_historical": 753,
+        "chart_adjusted": 0,
+        "financing_adjustment": 0,
+        "published_pro_forma": 753,
+        "transaction_adjustment": 0
+      },
+      "displayed_cells": [
+        "753",
+        "\u2014",
+        "\u2014",
+        "\u2014",
+        "753"
+      ],
+      "metric": "short_term_debt",
+      "period": "2026-03-31",
+      "source_label": "Short-term debt",
+      "unit": "USD_millions"
+    },
+    {
+      "basis": "illustrative_unaudited_pro_forma",
+      "column_values": {
+        "bkr_historical": 15411,
+        "chart_adjusted": 3808,
+        "financing_adjustment": 2000,
+        "published_pro_forma": 17411,
+        "transaction_adjustment": -3808
+      },
+      "displayed_cells": [
+        "15,411",
+        "3,808",
+        "(3,808)",
+        "2,000",
+        "17,411"
+      ],
+      "metric": "long_term_debt",
+      "period": "2026-03-31",
+      "source_label": "Long-term debt",
+      "unit": "USD_millions"
+    },
+    {
+      "basis": "illustrative_unaudited_pro_forma",
+      "column_values": {
+        "bkr_historical": 50896,
+        "chart_adjusted": 9692,
+        "financing_adjustment": 2000,
+        "published_pro_forma": 56214,
+        "transaction_adjustment": -6374
+      },
+      "displayed_cells": [
+        "$ 50,896",
+        "$ 9,692",
+        "$ (6,374)",
+        "$ 2,000",
+        "$ 56,214"
+      ],
+      "metric": "total_assets",
+      "period": "2026-03-31",
+      "source_label": "Total assets",
+      "unit": "USD_millions"
+    }
+  ],
+  "source_body_identities": [
+    {
+      "bytes": 159282,
+      "captured_at_utc": "2026-10-14T08:06:26.607044+00:00",
+      "content_type": "application/json",
+      "path": "submissions.json",
+      "sha256": "499ba6d918a9a73ee5785d638ce9f27bc5b69a973712adc30a2f03c289bfb368",
+      "status_code": 200,
+      "url": "https://data.sec.gov/submissions/CIK0001701605.json"
+    },
+    {
+      "bytes": 44482,
+      "captured_at_utc": "2026-10-14T08:06:26.827478+00:00",
+      "content_type": "text/html",
+      "path": "amended_8k.html",
+      "sha256": "25bf6089d425cf1f7aea98178929ba657ec78cae3058161aa7fd0f3296c67d0e",
+      "status_code": 200,
+      "url": "https://www.sec.gov/Archives/edgar/data/1701605/000170160526000029/bkr-20260716.htm"
+    },
+    {
+      "bytes": 287001,
+      "captured_at_utc": "2026-10-14T08:06:27.097503+00:00",
+      "content_type": "text/html",
+      "path": "exhibit_993.html",
+      "sha256": "15405a0193fd9e2d4cf915f1e20180adc910ac37452b740b1c34447cca1440d1",
+      "status_code": 200,
+      "url": "https://www.sec.gov/Archives/edgar/data/1701605/000170160526000029/bkr20260110exhibit993.htm"
+    },
+    {
+      "bytes": 55511,
+      "captured_at_utc": "2026-10-14T08:06:27.290279+00:00",
+      "content_type": "text/html",
+      "path": "original_8k.html",
+      "sha256": "ce2ffcba238da7aab80313a49579f8715e327de69ab5bde25bf801f8987fa0d1",
+      "status_code": 200,
+      "url": "https://www.sec.gov/Archives/edgar/data/1701605/000119312526305477/d105425d8k.htm"
+    }
+  ],
+  "source_capture_commit": "91ac63f1dfa0f5aa2e04147eb47ea26674969dc3",
+  "source_registration_commit": "83d8ed63e69bfcb7aafb422fd5e00ed9bb975e54",
+  "statement_context": [
+    "As of March 31, 2026",
+    "Pro Forma Combined Balance Sheet (Unaudited)",
+    "Baker Hughes Company"
+  ],
+  "status": "PASS_ORIGINAL_SOURCE_RECONCILIATION",
+  "terminal_2028_calibration": null,
+  "transaction": {
+    "actual_borrowing_usd_millions": 2000,
+    "amendment_filed_on": "2026-10-01",
+    "consideration_components_usd_millions": {
+      "cash_consideration": 10054,
+      "chart_debt_paid": 4451,
+      "preliminary_consideration": 14806,
+      "stock_awards": 43,
+      "termination_fee": 258
+    },
+    "new_cash_uses_usd_millions": 14548,
+    "original_report_filed_on": "2026-07-16",
+    "source_loan_draw_date": "2026-07-15",
+    "termination_fee_prepaid_year": 2025,
+    "transaction_completion_date": "2026-07-16"
+  }
+}

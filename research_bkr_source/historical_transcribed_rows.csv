@@ -1,0 +1,5 @@
+metric,period,basis,unit,bkr_historical,chart_adjusted,transaction_adjustment,financing_adjustment,published_pro_forma,sec_exhibit_line,sec_exhibit_url
+cash_and_cash_equivalents,2026-03-31,illustrative_unaudited_pro_forma,USD_millions,14764,268,-14548,2000,2484,34,https://www.sec.gov/Archives/edgar/data/1701605/000170160526000029/bkr20260110exhibit993.htm
+short_term_debt,2026-03-31,illustrative_unaudited_pro_forma,USD_millions,753,0,0,0,753,52,https://www.sec.gov/Archives/edgar/data/1701605/000170160526000029/bkr20260110exhibit993.htm
+long_term_debt,2026-03-31,illustrative_unaudited_pro_forma,USD_millions,15411,3808,-3808,2000,17411,59,https://www.sec.gov/Archives/edgar/data/1701605/000170160526000029/bkr20260110exhibit993.htm
+total_assets,2026-03-31,illustrative_unaudited_pro_forma,USD_millions,50896,9692,-6374,2000,56214,47,https://www.sec.gov/Archives/edgar/data/1701605/000170160526000029/bkr20260110exhibit993.htm
