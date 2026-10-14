@@ -39,8 +39,12 @@ def validate_discovery(raw):
     p = json.loads(raw)
     if isinstance(p.get('cik'), bool) or str(p.get('cik')).zfill(10) != CIK:
         raise ValueError('Wrong SEC issuer')
-    if re.sub(r'\W', '', p.get('name', '')).lower() != 'bakerhughescompany':
+    # The original SEC snapshot names this exact CIK "Baker Hughes Co";
+    # the registered filings use "Baker Hughes Company". Both are explicit aliases.
+    if re.sub(r'\W', '', p.get('name', '')).lower() not in {'bakerhughesco', 'bakerhughescompany'}:
         raise ValueError('Wrong issuer name')
+    if not isinstance(p.get('tickers'), list) or 'BKR' not in p['tickers']:
+        raise ValueError('Wrong issuer ticker')
     recent = p['filings']['recent']
     names = ('accessionNumber', 'form', 'reportDate', 'filingDate', 'primaryDocument')
     if any(not isinstance(recent.get(k), list) for k in names):
